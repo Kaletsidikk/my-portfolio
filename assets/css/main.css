@@ -361,48 +361,48 @@ body {
 .hero__img-wrapper {
   display: inline-block;
   position: relative;
-  width: 300px; /* Diameter of the circle */
-  height: 300px; /* Diameter of the circle to make it a perfect circle */
-  border-radius: 50%; /* Makes the container a circle */
-  overflow: hidden; /* Ensure content fits within the circle */
-  position: absolute; /* Allows precise positioning */
-  left: 850px; /* Adjust this value to move closer to the right, but not too close */
-  top: 50%; /* Vertically center (adjust if needed) */
-  transform: translateY(-50%); /* Vertically center */
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  position: absolute; 
+  left: 850px; 
+  top: 50%; 
+  transform: translateY(-50%); 
 }
 
 /* Image Styles */
 .hero__img {
-  width: 100%; /* Image takes full width of the container */
-  height: 100%; /* Image takes full height of the container */
-  object-fit: cover; /* Ensure the image covers the container */
-  position: relative; /* Ensure the image remains static */
-  z-index: 1; /* Place the image above the rotating border */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  position: relative; 
+  z-index: 1; 
 }
 .hero__wrapper {
-  min-height: calc(100vh - var(--height-header)); /* Adjusted for header height */
+  min-height: calc(100vh - var(--height-header)); 
   padding: 5rem 0;
-  position: relative; /* Allows for child positioning */
+  position: relative; 
 }
 .hero__img-wrapper {
   display: inline-block;
-  position: absolute; /* Allows precise positioning */
-  width: 300px; /* Diameter of the circle */
-  height: 300px; /* Diameter of the circle */
-  border-radius: 50%; /* Makes the container a circle */
-  overflow: hidden; /* Ensure content fits within the circle */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%) translateY(-50%); /* Center horizontally and vertically */
-  top: 50%; /* Center vertically */
+  position: absolute; 
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%;
+  overflow: hidden; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%); 
+  top: 50%; 
 }
 
 /* Image Styles */
 .hero__img {
-  width: 100%; /* Image takes full width of the container */
-  height: 100%; /* Image takes full height of the container */
-  object-fit: cover; /* Ensure the image covers the container */
-  position: relative; /* Ensure the image remains static */
-  z-index: 1; /* Place the image above the rotating border */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  position: relative; 
+  z-index: 1; 
 }
 
 /* Rolling Animation for the Circle Border */
@@ -414,14 +414,14 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 10px solid var(--color-primary); /* Thin green border */
+  border: 10px solid var(--color-primary);
   box-sizing: border-box;
   border-style: solid;
   border-width: 10px;
-  border-color: transparent var(--color-primary) transparent var(--color-primary); /* Only border sides visible */
-  animation: roll 5s linear infinite; /* Rolling animation */
-  z-index: 0; /* Place the rotating border below the image */
-  pointer-events: none; /* Ensure this doesn't interfere with interaction */
+  border-color: transparent var(--color-primary) transparent var(--color-primary); 
+  animation: roll 5s linear infinite; 
+  z-index: 0; 
+  pointer-events: none; 
 }
 
 /* Rolling Animation */
