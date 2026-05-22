@@ -26,6 +26,17 @@
 </head>
 
 <body>
+    <!--=================== Scroll Progress Bar ====================-->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!--=================== Interactive Custom Cursor ====================-->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!--=================== Interactive Cosmic Background Canvas ====================-->
+    <div id="canvas3d-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
 
     <!--=================== Header ====================-->
     <header id="header" class="header">
@@ -52,6 +63,9 @@
                             <a href="#project" class="nav__link">Projects</a>
                         </li>
                         <li class="nav__item">
+                            <a href="#bots" class="nav__link">Bots</a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#contact"  class="nav__link">Contact</a>
                         </li>
                     </ul>
@@ -70,30 +84,36 @@
                 <div class="d-grid hero__wrapper">
                     <div class="hero__content">
                         <h1 class="hero__title">Hi, I am Kaletsidik,<br><span  style="color:var(--color-primary);">Software developer and Video Editor.</span></h1>
-                        <p class="hero__description">Hi! I’m a software developer who’s passionate about building smart and user-friendly solutions. I focus on delivering top-quality software that meets your needs and makes life easier for everyone. Let’s connect and make your next project a success!
-
-
-                        </p>
+                        <p class="hero__description">Hi! I’m a software developer who’s passionate about building smart and user-friendly solutions. I focus on delivering top-quality software that meets your needs and makes life easier for everyone. Let’s connect and make your next project a success!</p>
+                        <div class="hero__btns" style="margin-bottom: 4rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+                            <a href="#contact" class="btn btn--primary">Get in Touch</a>
+                            <a href="assets/Kaletsidik_Kelayneh_CV.pdf" download class="btn btn--secondary">Download CV</a>
+                        </div>
                         <div class="hero__info">
                             <div class="hero__info-wrapper">
-                                <p class="hero__info-number">02+ </p>
-                                <h2 class="hero__info-title">Years<br>Experience in software development</h2><br>
                                 <p class="hero__info-number">03+ </p>
+                                <h2 class="hero__info-title">Years<br>Experience in software development</h2><br>
+                                <p class="hero__info-number">02+ </p>
                                 <h2 class="hero__info-title">Years<br>Experience in video editing</h2>
                                 
                             </div>
                             <div class="hero__info-wrapper">
-                                <p class="hero__info-number">10+</p>
+                                <p class="hero__info-number">20+</p>
                                 <h2 class="hero__info-title">Projects<br>Completed</h2>
                             </div>
                           
                         </div>
                     </div>
                     <div class="hero__wrapper">
-                        <div class="hero__img-wrapper">
-                          <img src="assets/Img/kalu.png" class="hero__img" alt="Hero Image">
+                        <div class="hero__img-outer">
+                            <div class="hero__ring hero__ring--1"></div>
+                            <div class="hero__ring hero__ring--2"></div>
+                            <div class="hero__ring hero__ring--3"></div>
+                            <div class="hero__img-wrapper">
+                                <img src="assets/Img/kalu.png" class="hero__img" alt="Hero Image">
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         
@@ -157,74 +177,71 @@
                     <h2 class="section__title">Qualification</h2>
                     <span class="section__subtitle">Experience & Education</span>
                 </div>
-                <!--============== Professional Experience ============-->
-                <div class="qualification__wrapper">
-                    <h3 class="qualification__name">
-                        <i class="ri-briefcase-fill"></i>
-                        Professional Experience
-                    </h3>
-                    <div class="d-grid qualification__content">
-                        <!-- Experience 1-->
-                        <div class="qualification__item">
-                            <h3 class="qualification__title">Freelance software Developer</h3>
-                            <p class="qualification__description">As a freelance software developer, I am passionate about creating innovative and effective software solutions thats meet the unique needs of my clients.
-                                Whether it's building a custom web application or automating business processes, I bring expertise and creativity to every project, 
-                                and I am always looking for new and challenging projects to tackle.
-                            </p>
-                            <span class="qualification__date">2023 - Present</span><br><br>
-                        </div>
-                         
-                        </div><!-- Experience 2-->
-                         <div class="qualification__item">
-                            <h3 class="qualification__title">Video Editor</h3>
-                            <p class="qualification__description">
-
-                                As a YouTube video editor, I create engaging, high-quality content for both my own channel and clients. I specialize in editing footage, enhancing visuals, and improving audio to produce polished, professional videos. I work across various styles, ensuring each project meets deadlines and resonates with viewers.
-                                
-                            </p>
-                            <span class="qualification__date">2023 - Present</span><br><br>
+                <div class="d-grid qualification__grid">
+                    <!--============== Professional Experience ============-->
+                    <div class="qualification__wrapper">
+                        <h3 class="qualification__name">
+                            <i class="ri-briefcase-fill"></i>
+                            Professional Experience
+                        </h3>
+                        <div class="d-grid qualification__content">
+                            <!-- Experience 1-->
+                            <div class="qualification__item">
+                                <h3 class="qualification__title">Freelance software Developer</h3>
+                                <p class="qualification__description">As a freelance software developer, I am passionate about creating innovative and effective software solutions thats meet the unique needs of my clients.
+                                    Whether it's building a custom web application or automating business processes, I bring expertise and creativity to every project, 
+                                    and I am always looking for new and challenging projects to tackle.
+                                </p>
+                                <span class="qualification__date">2023 - Present</span>
+                            </div>
+                             
+                            <!-- Experience 2-->
+                            <div class="qualification__item">
+                                <h3 class="qualification__title">Video Editor</h3>
+                                <p class="qualification__description">
+                                    As a YouTube video editor, I create engaging, high-quality content for both my own channel and clients. I specialize in editing footage, enhancing visuals, and improving audio to produce polished, professional videos. I work across various styles, ensuring each project meets deadlines and resonates with viewers.
+                                </p>
+                                <span class="qualification__date">2023 - Present</span>
+                            </div>
                             
-                        </div><!-- Experience 3-->
-                        <div class="qualification__item">
-                           <h3 class="qualification__title">Graphic Designer</h3>
-                           <p class="qualification__description">
-
-                            As a graphic designer, I create eye-catching visuals for digital platforms. I specialize in designing thumbnails that attract viewers and enhance engagement. With a strong understanding of color, typography, and composition, I deliver professional designs that effectively communicate ideas and brand messages.
-                           </p>
-                           <span class="qualification__date">2022 - Present</span><br><br>
-                       
-                    </div>
-                </div>
-              
-                <!--============== Education ============-->
-                <div class="qualification__wrapper">
-                    <h3 class="qualification__name">
-                        <i class="ri-booklet-fill"></i>
-                        Education
-                    </h3>
-                    <div class="d-grid qualification__content">
-                        <!-- Education 1-->
-                        <div class="qualification__item">
-                            <h3 class="qualification__title">Health informatics</h3>
-                            <p class="qualification__description">As a student in health informatics, my coursework has provided me with a solid understanding of key computer science principles, including software design and development. Through various projects and assignments, I have developed strong programming skills and a deep appreciation for how these technical concepts apply to health informatics. This knowledge and practical experience enable me to effectively address complex challenges in healthcare data management and system design.
-
-
-                            </p>
-                            <span class="qualification__date">2022 - 2026</span>
+                            <!-- Experience 3-->
+                            <div class="qualification__item">
+                                <h3 class="qualification__title">Graphic Designer</h3>
+                                <p class="qualification__description">
+                                    As a graphic designer, I create eye-catching visuals for digital platforms. I specialize in designing thumbnails that attract viewers and enhance engagement. With a strong understanding of color, typography, and composition, I deliver professional designs that effectively communicate ideas and brand messages.
+                                </p>
+                                <span class="qualification__date">2022 - Present</span>
+                            </div>
                         </div>
-                        <!-- Education 2-->
-                        <div class="qualification__item">
-                            <h3 class="qualification__title">web Developer</h3>
-                            <p class="qualification__description">I have developed a strong foundation in front-end development through self-directed learning. By mastering key front-end technologies and techniques on my own, I have honed my skills in creating user-friendly interfaces and enhancing the overall user experience. This self-taught expertise has equipped me to tackle complex challenges and deliver effective and innovative solutions in web development.
-                            </p>
-                            <span class="qualification__date">2023 - present</span>
-                        </div>
-                       
                     </div>
-                </div>
+                  
+                    <!--============== Education ============-->
+                    <div class="qualification__wrapper">
+                        <h3 class="qualification__name">
+                            <i class="ri-booklet-fill"></i>
+                            Education
+                        </h3>
+                        <div class="d-grid qualification__content">
+                            <!-- Education 1-->
+                            <div class="qualification__item">
+                                <h3 class="qualification__title">Health informatics</h3>
+                                <p class="qualification__description">As a student in health informatics, my coursework has provided me with a solid understanding of key computer science principles, including software design and development. Through various projects and assignments, I have developed strong programming skills and a deep appreciation for how these technical concepts apply to health informatics. This knowledge and practical experience enable me to effectively address complex challenges in healthcare data management and system design.
+                                </p>
+                                <span class="qualification__date">2022 - 2026</span>
+                            </div>
+                            <!-- Education 2-->
+                            <div class="qualification__item">
+                                <h3 class="qualification__title">web Developer</h3>
+                                <p class="qualification__description">I have developed a strong foundation in front-end development through self-directed learning. By mastering key front-end technologies and techniques on my own, I have honed my skills in creating user-friendly interfaces and enhancing the overall user experience. This self-taught expertise has equipped me to tackle complex challenges and deliver effective and innovative solutions in web development.
+                                </p>
+                                <span class="qualification__date">2023 - present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
                 <div class="qualification__footer">
                     <p class="qualification__footer-text">See my full resume</p>
-                    <a href="assets/kaletsidik_kelayneh_resume .pdf" download class="btn btn--primary">Resume</a>
+                    <a href="assets/Kaletsidik_Kelayneh_CV.pdf" download class="btn btn--primary">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -237,22 +254,21 @@
                 </div>
                 <div class="d-grid service__wrapper">
                     <!--========= service card 1 =========-->
-                    <div class="service__card">
+                    <div class="service__card glass-panel">
                         <div class="service__icon">
                             <i class="ri-layout-4-fill"></i>
                         </div>
                         <h3 class="service__title">Web<br>Development</h3>
-                        <a href="#" class="service__link">Know More</a>
+                        <a href="#contact" class="service__link">Know More</a>
                     </div>
                     <!--========= service card 2 =========-->
-                    <div class="service__card">
+                    <div class="service__card glass-panel">
                         <div class="service__icon">
                             <i class="ri-code-s-slash-line"></i>
                         </div>
                         <h3 class="service__title">Backend<br> Development</h3>
-                        <a href="#" class="service__link">Know More</a>
+                        <a href="#contact" class="service__link">Know More</a>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -267,44 +283,124 @@
                 <div class="d-grid project__wrapper">
                     <!--============== project 1 =============-->
                     <div class="project__content">
-                        <img src="assets/hospital website.png" alt="Agency Website" class="project__img">
-                        <h3 class="project__title">Hospital Website</h3>
-                        <p class="project__description">Created a user-friendly hospital website for booking appointments, accessing medical records, and finding service information. Focused on clarity and ease of use for both patients and staff.</p>
-                        <a href=" https://kaletsidikk.github.io/HakimGizaw-Website/" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a>
+                        <div class="project__img-container">
+                            <span class="project__badge">Web Development</span>
+                            <img src="assets/hospital website.png" alt="Hospital Website" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">Hospital Website</h3>
+                            <p class="project__description">Created a user-friendly hospital website for booking appointments, accessing medical records, and finding service information. Focused on clarity and ease of use for both patients and staff.</p>
+                            <a href="https://kaletsidikk.github.io/HakimGizaw-Website/" target="_blank" class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
                     <!--============== project 2 =============-->
                     <div class="project__content">
-                        <img src="assets/hospital%20dashboard%20.png" alt="Crypto Application " class="project__img">
-                        <h3 class="project__title">Hospital Website & Dashboard</h3>
-                        <p class="project__description">
-
-Developed a user-friendly hospital website and dashboard. The website allows patients to book appointments and access medical records,t he dashboard helps staff manage operations efficiently.</p>
-                        <a href="https://kaletsidikk.github.io/Personalized-Dashboard/" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a>
+                        <div class="project__img-container">
+                            <span class="project__badge">Full Stack & UI/UX</span>
+                            <img src="assets/hospital dashboard .png" alt="Hospital Dashboard" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">Hospital Website & Dashboard</h3>
+                            <p class="project__description">Developed a user-friendly hospital website and dashboard. The website allows patients to book appointments and access medical records, while the dashboard helps staff manage operations efficiently.</p>
+                            <a href="https://kaletsidikk.github.io/Personalized-Dashboard/" target="_blank" class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
                     <!--============== project 3 =============-->
                     <div class="project__content">
-                        <img src="assets/ecommerce%20%20website.png" alt="Ecommerce Website" class="project__img">
-                        <h3 class="project__title">Ecommerce Website</h3>
-                        <p class="project__description">Developed a straightforward e-commerce website using HTML, CSS, and JavaScript. It features clean design and essential functionality for a smooth online shopping experience.</p>
-                        <a href="https://kaletsidikk.github.io/Ecommerce-website/" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a>
+                        <div class="project__img-container">
+                            <span class="project__badge">E-Commerce</span>
+                            <img src="assets/ecommerce  website.png" alt="Ecommerce Website" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">Ecommerce Website</h3>
+                            <p class="project__description">Developed a straightforward e-commerce website using HTML, CSS, and JavaScript. It features clean design and essential functionality for a smooth online shopping experience.</p>
+                            <a href="https://kaletsidikk.github.io/Ecommerce-website/" target="_blank" class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
-                    <!-- ============== project 4 ============= -->
+                    <!-- ============== project 5: Sinzir Design Platform ============= -->
                     <div class="project__content">
-                        <img src="assets/tattoo.png" alt="personal portfolio" class="project__img">
-                        <h3 class="project__title">Responsive Tattoo shop website</h3>
-                        <p class="project__description">responsive to all devices, 
-                        with ui components and smooth scroll.</p>
-                        <a href="https://kaletsidikk.github.io/Tattoo-shop-website/" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a>
+                        <div class="project__img-container">
+                            <span class="project__badge">Creative Design & Branding</span>
+                            <img src="assets/sinzir.png" alt="Sinzir Design Platform" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">Sinzir Design Platform</h3>
+                            <p class="project__description">A full-stack creative design and branding platform for weddings and events. Features a polished landing page, dynamic portfolio showcase, and client booking flow — deployed on Railway with a custom domain.</p>
+                            <a href="https://www.sinzir.work.gd" target="_blank" rel="noopener noreferrer" class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <!-- ============== project 6: HakimGizaw EMR ============= -->
+                    <div class="project__content">
+                        <div class="project__img-container">
+                            <span class="project__badge">Health Informatics & Full Stack</span>
+                            <img src="assets/emr.png" alt="HakimGizaw EMR System" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">HakimGizaw Hospital EMR</h3>
+                            <p class="project__description">A production-ready Electronic Medical Records system for Debre Berhan University's Hakim Gizaw Hospital. Built with PHP & MySQL, it provides a Patient Portal, Staff Login, and Admin Dashboard for managing appointments and medical records.</p>
+                            <a href="https://github.com/Kaletsidikk/HakimGizawEMR" target="_blank" rel="noopener noreferrer" class="project__link">View on GitHub
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <!-- ============== project 7: HakimGizaw ANC CDSS ============= -->
+                    <div class="project__content">
+                        <div class="project__img-container">
+                            <span class="project__badge">Clinical Decision Support · AI/ML</span>
+                            <img src="assets/cdssanc.png" alt="HakimGizaw ANC CDSS" class="project__img">
+                        </div>
+                        <div class="project__details">
+                            <h3 class="project__title">ANC Clinical Decision Support System</h3>
+                            <p class="project__description">A role-based Clinical Decision Support System for Antenatal Care at Hakim Gizaw Hospital. Supports physician, senior_physician, and midwife workflows — with ML-powered risk prediction models, real-time ANC data sync, and a structured patient management dashboard built in PHP.</p>
+                            <a href="https://github.com/Kaletsidikk/HakimGizawEMR" target="_blank" rel="noopener noreferrer" class="project__link">View on GitHub
+                                <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--=================== Telegram Bots ====================-->
+        <section id="bots" class="section bots">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Telegram Bots</h2>
+                    <span class="section__subtitle">Automated Systems</span>
+                </div>
+                <div class="d-grid bots__wrapper">
+                    <!-- Bot 1: Mela Felagi - Job Aggregator -->
+                    <div class="bot__card glass-panel">
+                        <div class="bot__icon-box">
+                            <img src="assets/Img/mela_felagi.jpg" alt="Mela Felagi" class="bot__img">
+                        </div>
+                        <div class="bot__info">
+                            <h3 class="bot__title">Mela Felagi <span class="bot__tag">@Mela_felagi_bot</span></h3>
+                            <p class="bot__description">A personalized Telegram job aggregation bot that scrapes, parses, and delivers curated job listings from regional channels. Built on a custom regex-based parsing engine in Python that extracts job titles, requirements, and salary data — mapping them into a structured Supabase database in real time.</p>
+                            <a href="https://t.me/Mela_felagi_bot" target="_blank" rel="noopener noreferrer" class="bot__link">Open Bot
+                                <i class="ri-telegram-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Bot 2: Donkey Birr - Engagement Platform Bot -->
+                    <div class="bot__card glass-panel">
+                        <div class="bot__icon-box">
+                            <img src="assets/Img/donkey_birr.png" alt="Donkey Birr" class="bot__img">
+                        </div>
+                        <div class="bot__info">
+                            <h3 class="bot__title">Donkey Birr <span class="bot__tag">@donkeybirrbot</span></h3>
+                            <p class="bot__description">A production-grade Telegram Mini App bot for the Ethiopian market. Powers a verified social engagement platform (Telegram groups, YouTube subs & watch-time) with a fraud-proof server-side verification engine, a real-time campaign budget system, and a 70/10/10/10 reward economy backed by Google OAuth 2.0 and Supabase PostgreSQL.</p>
+                            <a href="https://t.me/donkeybirrbot" target="_blank" rel="noopener noreferrer" class="bot__link">Open Bot
+                                <i class="ri-telegram-line"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        
 
         <!--=================== Contact ====================-->
         <section id="contact" class="section contact">
@@ -321,7 +417,7 @@ Developed a user-friendly hospital website and dashboard. The website allows pat
                         <a href="https://t.me/KALNETWORK" class="btn btn--secondary">Get in touch</a>
                     </div>
                 </div>
-            </div
+            </div>
         </section>
     </main>
     <!--=================== footer ====================-->
@@ -355,11 +451,15 @@ Developed a user-friendly hospital website and dashboard. The website allows pat
                 </div>
                 <div class="footer__content">
                     <h4 class="footer__title">Email Me</h4>
-                    <a href="#" class="footer__contact">kaletsidikkelayneh@gmail.com</a>
+                    <a href="mailto:kaletsidikkelayneh@gmail.com" class="footer__contact">
+                        <i class="ri-mail-line"></i> kaletsidikkelayneh@gmail.com
+                    </a>
                 </div>
                 <div class="footer__content">
                     <h4 class="footer__title">Call Me</h4>
-                    <a href="#" class="footer__contact">+(251) 925164514</a>
+                    <a href="tel:+251925164514" class="footer__contact">
+                        <i class="ri-phone-line"></i> +(251) 925164514
+                    </a>
                 </div>
             </div>
             <p class="footer__copyright">&copy; 2025 kaletsidik kelayneh. All Rights Reserved</p>
