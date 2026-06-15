@@ -2,4 +2,4 @@
 
 Full-Stack Developer Portfolio showcasing my recent work and projects.
 
-🌍 **Live Website:** [https://kalu-dev.vercel.app/](https://kalu-dev.vercel.app/)
+🌍 **Live Website:** [https://kalu.lol/](https://kalu.lol/)
