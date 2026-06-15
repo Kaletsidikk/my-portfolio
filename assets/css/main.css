@@ -856,6 +856,23 @@ img {
   background: #fff;
 }
 
+/* Full desktop preview for Piassa Menu */
+.piassa-desktop-iframe {
+  width: 1280px;
+  height: 900px;
+  border: none;
+  transform: scale(0.33);
+  transform-origin: top left;
+  pointer-events: none;
+  display: block;
+  background: #fff;
+}
+
+.iframe-wrapper:has(.piassa-desktop-iframe) {
+  overflow: hidden;
+  height: calc(900px * 0.33);
+}
+
 /* Hover overlay */
 .iframe-overlay {
   position: absolute;
