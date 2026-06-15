@@ -874,6 +874,33 @@ img {
   background: #000;
 }
 
+/* Piassa Menu screenshot hover overlay */
+.piassa-screenshot-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.piassa-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 8, 0.72);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 5;
+}
+
+.piassa-screenshot-container:hover .piassa-hover-overlay {
+  opacity: 1;
+}
+
+.piassa-screenshot-container:hover .iframe-open-btn {
+  transform: translateY(0);
+}
+
 /* Hover overlay */
 .iframe-overlay {
   position: absolute;
