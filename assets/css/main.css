@@ -1469,12 +1469,6 @@ img {
     font-size: 3.6rem;
   }
   
-  .hero__info {
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-  }
-  
   .skills__wrapper {
     grid-template-columns: 1fr;
   }
@@ -1575,21 +1569,28 @@ img {
   }
   
   /* Style hero stats to be inline, horizontal and clean on mobile instead of taking up massive vertical space */
+  .hero__btns {
+    justify-content: center !important;
+  }
   .hero__info {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     justify-content: center !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     margin-top: 2rem !important;
   }
   .hero__info-wrapper {
     text-align: center !important;
+    flex: 1 !important;
+    min-width: 75px !important;
   }
   .hero__info-number {
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.2rem !important;
   }
   .hero__info-title {
-    font-size: 1.1rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
   }
 }
