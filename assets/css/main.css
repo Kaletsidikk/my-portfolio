@@ -1515,3 +1515,68 @@ img {
   .hero__ring--2 { width: 265px; height: 265px; }
   .hero__ring--3 { width: 280px; height: 280px; }
 }
+
+/* ==================== Mobile Mode Only Optimizations ==================== */
+@media screen and (max-width: 768px) {
+  /* Smaller Icons in Mobile mode */
+  .nav__brand i {
+    font-size: 2rem !important;
+  }
+  .nav__toggle {
+    font-size: 1.8rem !important;
+  }
+  .skills__item i {
+    font-size: 1.4rem !important;
+  }
+  .qualification__name i {
+    font-size: 1.8rem !important;
+  }
+  .qualification__item::before {
+    left: -3.4rem !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-width: 2px !important;
+  }
+  .qualification__content {
+    padding-left: 2rem !important;
+    margin-left: 1rem !important;
+    gap: 2.5rem !important;
+  }
+  .bot__icon-box {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 12px !important;
+  }
+  .bot__img {
+    border-radius: 10px !important;
+  }
+  .footer__social-link {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.5rem !important;
+  }
+  .footer__contact i {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Important things only / Eliminate repeated things on mobile */
+  /* Hide the generic Services section which repeats information from experience, education & skills */
+  #service {
+    display: none !important;
+  }
+  
+  /* Hide Services link in Mobile Navigation Menu */
+  .nav__item--service {
+    display: none !important;
+  }
+  
+  /* Hide the QR code container in Contact section on mobile (scanning own screen is impossible/useless) */
+  .contact__qr-container {
+    display: none !important;
+  }
+  
+  /* Hide the hero info stats on mobile to keep the hero section compact, clean and eliminate repetition of years/projects info */
+  .hero__info {
+    display: none !important;
+  }
+}
