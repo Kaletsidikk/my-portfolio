@@ -1542,6 +1542,10 @@ img {
     margin-left: 1rem !important;
     gap: 2.5rem !important;
   }
+  .service__icon {
+    font-size: 2.4rem !important;
+    margin-bottom: 1.5rem !important;
+  }
   .bot__icon-box {
     width: 50px !important;
     height: 50px !important;
@@ -1560,23 +1564,32 @@ img {
   }
   
   /* Important things only / Eliminate repeated things on mobile */
-  /* Hide the generic Services section which repeats information from experience, education & skills */
-  #service {
-    display: none !important;
-  }
-  
-  /* Hide Services link in Mobile Navigation Menu */
-  .nav__item--service {
-    display: none !important;
-  }
-  
   /* Hide the QR code container in Contact section on mobile (scanning own screen is impossible/useless) */
   .contact__qr-container {
     display: none !important;
   }
   
-  /* Hide the hero info stats on mobile to keep the hero section compact, clean and eliminate repetition of years/projects info */
-  .hero__info {
+  /* Hide the duplicate CV download block at the qualification footer (since it's already in the hero section) */
+  .qualification__footer {
     display: none !important;
+  }
+  
+  /* Style hero stats to be inline, horizontal and clean on mobile instead of taking up massive vertical space */
+  .hero__info {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+  }
+  .hero__info-wrapper {
+    text-align: center !important;
+  }
+  .hero__info-number {
+    font-size: 2.2rem !important;
+  }
+  .hero__info-title {
+    font-size: 1.1rem !important;
   }
 }
